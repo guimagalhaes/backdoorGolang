@@ -37,6 +37,8 @@ cd $GOPATH
 go get github.com/guimagalhaes/backdoorGolang
 ```
 
+After that, inject the backdoor by importing the Golang module as mentioned above.
+
 
 ## Client
 
