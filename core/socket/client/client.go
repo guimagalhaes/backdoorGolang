@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/pilebones/backdoorGolang/core/socket"
+	"github.com/guimagalhaes/backdoorGolang/core/socket"
 )
 
 type ClientProvider struct {

