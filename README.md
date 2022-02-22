@@ -32,6 +32,12 @@ From Debian :
 (sudo) apt-get install golang-go
 ```
 
+From SUSE :
+
+```bash
+(sudo) zypper install go1.16
+```
+
 ## Installation
 
 ```bash
@@ -81,12 +87,12 @@ To exit the netcat session:
 <enter>
 ```
 
-### Instructions
+### More instructions
 
 Each message submit by client is sent to all backdoor's clients like a chat. 
 However, an alone chat's feature is useless, there are a set of instructions allowed by all clients which have different behavior for taking advantage of the compromised server.
 
-#### Quit Instruction
+#### Quit Client connection
 
 This instruction permit to logout the current user
 
@@ -101,7 +107,7 @@ Example :
 echo "/quit"|netcat localhost 23000
 ```
 
-#### Command Instruction
+#### Shell Command Instruction
 
 This instruction permit to execute shell command from server. (OS supported : Linux, Windows)
 
