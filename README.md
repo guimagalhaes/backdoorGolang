@@ -36,7 +36,7 @@ From Debian :
 
 ```bash
 cd $GOPATH
-go get github.com/guimagalhaes/backdoorGolang@v0.2.1
+go get github.com/guimagalhaes/backdoorGolang@v0.2.2
 ```
 
 ## Run test example
