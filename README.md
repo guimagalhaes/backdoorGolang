@@ -64,7 +64,10 @@ git clone github.com/guimagalhaes/backdoorGolangtests
 ## Run test example
 Go to `$GOPATH/src/github.com/guimagalhaes/backdoorGolangtests/simple_example` folder, remove the inject_backdoor.go source file and build it:
 
-`go build`
+```
+rm inject_backdoor.go
+go build
+```
 
 Execute the binary './simple_example' and see that only a simple HTTP server is available:
 
