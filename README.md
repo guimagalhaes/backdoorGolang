@@ -60,10 +60,10 @@ Follow the next session to see how to test the infected version of the binary.
 
 ## Client
 
-Use netcat
+Use netcat (It is used the 'localhost:23000' address hardcoded for now):
 
 ```bash
-netcat localhost 1234
+netcat localhost 23000
 ```
 
 Then execute a sequence of shell commands using '/cmd ' as prefix:
