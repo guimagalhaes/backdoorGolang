@@ -2,7 +2,7 @@
 
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/pilebones/backdoorGolang?svg=true&branch=master&passingText=Windows%20-%20OK&failingText=Windows%20-%20failed&pendingText=Windows%20-%20pending)](https://ci.appveyor.com/project/pilebones/backdoorGolang)
   
-Backdoor with Golang (Cross-Plateform)
+Backdoor with Golang (Cross-Platform)
 
 `/!\` Work in progress, not a stable release `/!\`
 
