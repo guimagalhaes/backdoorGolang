@@ -4,7 +4,7 @@
   
 Backdoor with Golang (Cross-Plateform)
 
-_/!\ Work in progress, not a stable release /!\_
+`/!\` Work in progress, not a stable release `/!\`
 
 ## Main goal
 
