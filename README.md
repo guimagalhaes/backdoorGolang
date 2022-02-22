@@ -96,6 +96,7 @@ Then execute a sequence of shell commands using '/cmd ' as prefix:
 ```
 /cmd ls -l
 /cmd ss -natp
+/cmd ps aux
 ...
 ```
 
