@@ -40,8 +40,8 @@ From SUSE :
 
 From CentOS 7/8 and RedHat 7/8:
 
-```bash
-TODO
+```
+See Golang SDK link above.
 ```
 
 ## Installation
@@ -51,7 +51,7 @@ go get github.com/guimagalhaes/backdoorGolang@v0.2.2
 ```
 
 ## Clone the project
-To do the following experiments, clode the project:
+To do the following experiments, clone the project:
 
 ```
 mkdir $GOPATH/src/github.com/guimagalhaes/
