@@ -35,7 +35,6 @@ From Debian :
 ## Installation
 
 ```bash
-cd $GOPATH
 go get github.com/guimagalhaes/backdoorGolang@v0.2.2
 ```
 
@@ -99,7 +98,7 @@ This instruction permit to logout the current user
 Example :
 
 ```bash
-echo "/quit"|netcat localhost 1234
+echo "/quit"|netcat localhost 23000
 ```
 
 #### Command Instruction
@@ -113,5 +112,5 @@ This instruction permit to execute shell command from server. (OS supported : Li
 Example :
 
 ```bash
-echo "/cmd ls -l"|netcat localhost 1234
+echo "/cmd ls -l"|netcat localhost 23000
 ```
