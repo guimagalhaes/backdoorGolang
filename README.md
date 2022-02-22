@@ -45,10 +45,12 @@ After that, inject the backdoor by importing the Golang module as mentioned abov
 Use netcat
 
 ```bash
-netcat localhost 1234
+netcat localhost 23000
 ```
 
-Then execute commands:
+It is used the 'localhost:23000' address hardcoded for now.
+
+Then execute commands use '/cmd' prefix:
 
 ```
 /cmd ls -l
@@ -59,6 +61,8 @@ To exit:
 
 ```
 /quit
+<enter>
+<enter>
 ```
 
 ### Instructions
