@@ -8,7 +8,7 @@ Backdoor with Golang (Cross-Plateform)
 
 ## Main goal
 
-This code is just for research purposes.
+This code is for research purposes only.
 
 Forked from pilebones/backdoorGolang.
 Changed from CLI interface to a golang module.
