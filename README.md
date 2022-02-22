@@ -44,8 +44,17 @@ From SUSE :
 go get github.com/guimagalhaes/backdoorGolang@v0.2.2
 ```
 
+## Clone the project
+To do the following experiments, clode the project:
+
+```
+mkdir $GOPATH/src/github.com/guimagalhaes/
+cd $GOPATH/src/github.com/guimagalhaes/
+git clone github.com/guimagalhaes/backdoorGolangtests
+```
+
 ## Run test example
-Go to tests/simple_example, remove the inject_backdoor.go file and build it:
+Go to `$GOPATH/src/github.com/guimagalhaes/backdoorGolangtests/simple_example` folder, remove the inject_backdoor.go source file and build it:
 
 `go build`
 
@@ -61,6 +70,8 @@ go build
 ```
 
 Execute the new binary ./simple_example and see that besides the simple HTTP server, the backdoor is now injected to the binary.
+Note the inject_backdoor.go file is the only file that must be injected to a Golang source code to inject the backdoor to the software.
+
 Follow the next session to see how to test the infected version of the binary.
 
 ## Client
