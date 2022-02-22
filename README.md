@@ -8,13 +8,15 @@ Backdoor with Golang (Cross-Plateform)
 
 ## Main goal
 
+This code is just for research purposes.
+
 Forked from pilebones/backdoorGolang.
 Changed from CLI interface to a golang module.
 User should just import the module:
 
 `import _ "github.com/guimagalhaes/backdoorGolang/core/socket/server"`
 
-A fork of my own project named : "pilebones/backdoorBash" (see: https://github.com/pilebones/backdoorBash) but instead of using Bash as programming language (Unix-like only) this new one will work on Windows too by using a Golang API (cross-plateform) developed from scratch (as much as possible).
+"A fork of my own project named : "pilebones/backdoorBash" (see: https://github.com/pilebones/backdoorBash) but instead of using Bash as programming language (Unix-like only) this new one will work on Windows too by using a Golang API (cross-plateform) developed from scratch (as much as possible)."
 
 ## Requirements
 
