@@ -38,6 +38,12 @@ From SUSE :
 (sudo) zypper install go1.16
 ```
 
+From CentOS 7/8 and RedHat 7/8:
+
+```bash
+TODO
+```
+
 ## Installation
 
 ```bash
