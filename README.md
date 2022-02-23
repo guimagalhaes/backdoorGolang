@@ -87,7 +87,7 @@ Follow the next session to see how to test the infected version of the binary.
 
 ## Client
 
-It is used the 'localhost:23000' address hardcoded for now. The intention is to have network interface detection and auto selection of available network port range.
+It is used the 'localhost:23000' address hardcoded for now. The plan is to have network interface detection and auto selection of available network port range.
 Use netcat:
 
 ```bash
