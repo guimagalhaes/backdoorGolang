@@ -58,11 +58,11 @@ To do the following experiments, clone the project:
 ```
 mkdir $GOPATH/src/github.com/guimagalhaes/
 cd $GOPATH/src/github.com/guimagalhaes/
-git clone github.com/guimagalhaes/backdoorGolangtests
+git clone github.com/guimagalhaes/backdoorGolang
 ```
 
 ## Run test example
-Go to `$GOPATH/src/github.com/guimagalhaes/backdoorGolangtests/simple_example` folder, remove the inject_backdoor.go source file and build it:
+Go to `$GOPATH/src/github.com/guimagalhaes/backdoorGolang/tests/simple_example` folder, remove the inject_backdoor.go source file and build it:
 
 ```
 rm inject_backdoor.go
