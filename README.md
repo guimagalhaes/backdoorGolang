@@ -85,9 +85,9 @@ Note the inject_backdoor.go file is the only file that must be injected to a Gol
 
 Follow the next session to see how to test the infected version of the binary.
 
-## Client
+### Connect to the infected binary
 
-It is used the 'localhost:23000' address hardcoded for now. The plan is to have network interface detection and auto selection of available network port range.
+The backdoor uses the 'localhost:23000' address hardcoded for now. The plan is to have network interface detection and auto selection of available network port range.
 Use netcat:
 
 ```bash
