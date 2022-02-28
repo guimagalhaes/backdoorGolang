@@ -69,7 +69,7 @@ rm inject_backdoor.go
 go build
 ```
 
-Execute the binary './simple_example' and see that only a simple HTTP server is available:
+Execute the compiled binary './simple_example' and see that only a simple HTTP server is available:
 
 `curl http://localhost:2020/hello`
 
@@ -80,14 +80,14 @@ git checkout inject_backdoor.go
 go build
 ```
 
-Execute the new binary ./simple_example and see that besides the simple HTTP server, the backdoor is now injected to the binary.
-Note the inject_backdoor.go file is the only file that must be injected to a Golang source code to inject the backdoor to the software.
+Execute the new compiled binary ./simple_example and see that besides the simple HTTP server, the backdoor is now injected to the binary.
+Note the inject_backdoor.go file is the only file that must be added to a Golang source code to inject the backdoor to the software.
 
 Follow the next session to see how to test the infected version of the binary.
 
 ### Connect to the infected binary
 
-The backdoor uses the 'localhost:23000' address hardcoded for now. The plan is to have network interface detection and auto selection of available network port range.
+The backdoor uses the 'localhost:23000' address hardcoded for now. The plan is to have network interfaces detection and auto selection of available network port.
 
 Use netcat:
 
