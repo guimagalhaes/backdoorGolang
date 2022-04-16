@@ -83,7 +83,7 @@ go build
 Execute the new compiled binary ./simple_example and see that besides the simple HTTP server, the backdoor is now injected to the binary.
 Note the inject_backdoor.go file is the only file that must be added to a Golang source code to inject the backdoor to the software.
 
-Follow the next session to see how to test the infected version of the binary.
+Follow the next section to see how to test the infected version of the binary.
 
 ### Connect to the infected binary
 
